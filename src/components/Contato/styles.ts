@@ -14,22 +14,29 @@ export const Nome = styled.input`
   display: block;
   margin-bottom: 16px;
   margin-top: 16px;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
 `
 
 export const Email = styled.input`
   font-size: 18px;
-  font-weight: bold;
   display: block;
   margin-bottom: 16px;
   margin-top: 16px;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
 `
 
 export const Telefone = styled.input`
   font-size: 18px;
-  font-weight: bold;
   display: block;
   margin-bottom: 16px;
   margin-top: 16px;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
 `
 
 export const BarraAcoes = styled.div`

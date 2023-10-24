@@ -1,5 +1,5 @@
 import BarraLateral from './containers/BarraLateral'
-import Contatos from './containers/Contatos/contatos'
+import ListaDeContatos from './containers/ListaDeContatos'
 import EstiloGlobal, { Container } from './styles'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <EstiloGlobal />
       <Container>
         <BarraLateral />
-        <Contatos />
+        <ListaDeContatos />
       </Container>
     </>
   )
