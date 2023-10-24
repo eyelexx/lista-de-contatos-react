@@ -6,9 +6,9 @@ type PropsSemLegendaEContador = Omit<Props, 'contador' | 'legenda'>
 
 export const Card = styled.div<PropsSemLegendaEContador>`
   padding: 8px;
-  border: 1px solid ${(props) => (props.ativo ? '#1E90FF' : '#a1a1a1')};
-  background-color: ${(props) => (props.ativo ? '#ffffff' : '#fcfcfc')};
-  color: ${(props) => (props.ativo ? '#1E90FF' : '#5e5e5e')};
+  border: 1px solid ${(props) => (props.ativo ? '#1e90ff' : '#a4b0be')};
+  background-color: ${(props) => (props.ativo ? '#ffffff' : '#f1f2f6')};
+  color: ${(props) => (props.ativo ? '#1e90ff' : '#57606f')};
   border-radius: 8px;
 `
 
