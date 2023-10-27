@@ -1,23 +1,25 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { remover } from '../../store/reducers/contatos'
+import { remover, editar } from '../../store/reducers/contatos'
+
+import ContatoClass from '../../models/Contato'
 
 import * as S from './styles'
-import ContatoClass from '../../models/Contato'
 
 type Props = ContatoClass
 
 const Contato = ({
   nome: nomeOriginal,
   email: emailOriginal,
-  telefone: telefoneOriginal
+  telefone: telefoneOriginal,
+  id
 }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
-  const [telefone, setTelefone] = useState(0)
+  const [telefone, setTelefone] = useState('')
 
   useEffect(() => {
     if (nomeOriginal.length > 0) {
@@ -32,7 +34,7 @@ const Contato = ({
   }, [emailOriginal])
 
   useEffect(() => {
-    if (telefoneOriginal > 0) {
+    if (telefoneOriginal.length > 0) {
       setTelefone(telefoneOriginal)
     }
   }, [telefoneOriginal])
@@ -50,13 +52,11 @@ const Contato = ({
         value={nome}
         onChange={(evento) => setNome(evento.target.value)}
         disabled={!estaEditando}
-        placeholder="Nome Sobrenome"
       />
       <S.Email
         value={email}
         onChange={(evento) => setEmail(evento.target.value)}
         disabled={!estaEditando}
-        placeholder="email@email.com"
       />
       <S.Telefone
         value={telefone}
@@ -66,7 +66,21 @@ const Contato = ({
       <S.BarraAcoes>
         {estaEditando ? (
           <>
-            <S.BotaoSalvar>Salvar</S.BotaoSalvar>
+            <S.BotaoSalvar
+              onClick={() => {
+                dispatch(
+                  editar({
+                    nome,
+                    email,
+                    telefone,
+                    id
+                  })
+                )
+                setEstaEditando(false)
+              }}
+            >
+              Salvar
+            </S.BotaoSalvar>
             <S.BotaoCancelarRemover onClick={cancelarEdicao}>
               Cancelar
             </S.BotaoCancelarRemover>
@@ -82,7 +96,7 @@ const Contato = ({
             </S.Botao>
             <S.BotaoCancelarRemover
               onClick={() => {
-                dispatch(remover(telefone))
+                dispatch(remover(id))
               }}
             >
               Remover
