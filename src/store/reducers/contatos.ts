@@ -39,7 +39,3 @@ const contatosSlice = createSlice({
 
 export const { remover } = contatosSlice.actions
 export default contatosSlice.reducer
-
-// new Contato('Kostelinha', 'kostelinha@gmail.com', 21911111111),
-// new Contato('Tuniko', 'tuniko@gmail.com', 21922222222),
-// new Contato('Karmela', 'karmela@gmail.com', 21933333333)
