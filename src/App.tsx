@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux'
-import BarraLateral from './containers/BarraLateral'
 import ListaDeContatos from './containers/ListaDeContatos'
 import EstiloGlobal, { Container } from './styles'
 
@@ -10,7 +9,6 @@ function App() {
     <Provider store={store}>
       <EstiloGlobal />
       <Container>
-        <BarraLateral />
         <ListaDeContatos />
       </Container>
     </Provider>

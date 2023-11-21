@@ -11,7 +11,8 @@ const EstiloGlobal = createGlobalStyle`
 `
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 224px auto;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 `
 export default EstiloGlobal
