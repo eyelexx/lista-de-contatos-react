@@ -10,19 +10,19 @@ const initialState: ContatosState = {
     {
       nome: 'Kostelinha',
       email: 'kostelinha@gmail.com',
-      telefone: 21911111111,
+      telefone: '21911111111',
       id: 1
     },
     {
       nome: 'Tuniko',
       email: 'tuniko@gmail.com',
-      telefone: 21922222222,
+      telefone: '21922222222',
       id: 2
     },
     {
       nome: 'Karmela',
       email: 'karmela@gmail.com',
-      telefone: 21933333333,
+      telefone: '21933333333',
       id: 3
     }
   ]

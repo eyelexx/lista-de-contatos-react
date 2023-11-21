@@ -19,7 +19,7 @@ const Contato = ({
   const [estaEditando, setEstaEditando] = useState(false)
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
-  const [telefone, setTelefone] = useState(0)
+  const [telefone, setTelefone] = useState('')
 
   useEffect(() => {
     if (nomeOriginal.length > 0) {
@@ -34,7 +34,7 @@ const Contato = ({
   }, [emailOriginal])
 
   useEffect(() => {
-    if (telefoneOriginal > 0) {
+    if (telefoneOriginal.length > 0) {
       setTelefone(telefoneOriginal)
     }
   }, [telefoneOriginal])
@@ -60,7 +60,7 @@ const Contato = ({
       />
       <S.Telefone
         value={telefone}
-        onChange={(evento) => setTelefone(Number(evento.target.value))}
+        onChange={(evento) => setTelefone(evento.target.value)}
         disabled={!estaEditando}
       />
       <S.BarraAcoes>
