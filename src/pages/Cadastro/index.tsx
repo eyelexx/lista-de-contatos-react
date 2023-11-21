@@ -1,3 +1,5 @@
-const Cadastro = () => <div>nova tarefa</div>
+import Formulario from '../../containers/Formulario'
+
+const Cadastro = () => <Formulario />
 
 export default Cadastro

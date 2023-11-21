@@ -1,4 +1,8 @@
+import { Link } from 'react-router-dom'
+
 import styled, { createGlobalStyle } from 'styled-components'
+import variaveis from './variaveis'
+import { Botao } from '../components/Contato/styles'
 
 const EstiloGlobal = createGlobalStyle`
   * {
@@ -15,4 +19,47 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 `
+
+export const MainContainer = styled.main`
+  padding: 0 40px;
+`
+
+export const Campo = styled.input`
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #666666;
+  border-color: #666666;
+  width: 100%;
+`
+
+export const Titulo = styled.h2`
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+`
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: ${variaveis.verde};
+`
+
+export const BotaoCancelarRemover = styled(Botao)`
+  background-color: ${variaveis.vermelho};
+`
+export const BotaoVoltar = styled(Link)`
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-right: 8px;
+  text-decoration: none;
+  background-color: ${variaveis.vermelho};
+`
+
 export default EstiloGlobal
