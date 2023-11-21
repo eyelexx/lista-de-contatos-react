@@ -17,7 +17,7 @@ const ListaDeContatos = () => {
 
   return (
     <MainContainer>
-      <Titulo>Lista de Contatos</Titulo>
+      <Titulo>Meus Contatos</Titulo>
       <ul>
         {filtraContatos().map((t) => (
           <li key={t.telefone}>
