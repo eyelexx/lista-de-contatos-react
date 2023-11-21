@@ -48,7 +48,7 @@ const Formulario = () => {
           placeholder="Telefone"
         ></Campo>
         <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
-        <BotaoVoltar to="/">Cancelar</BotaoVoltar>
+        <BotaoVoltar to="/">Cancelar e voltar</BotaoVoltar>
       </Form>
     </MainContainer>
   )
